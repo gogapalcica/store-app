@@ -1,0 +1,1 @@
+export const ProductHeading = () => <h1>Product</h1>;
