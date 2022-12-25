@@ -1,4 +1,4 @@
-import { ProductHeading } from "../components/AppProductHeadings";
+import { ProductHeading } from "../components/AppProductDetails";
 
 export const Products = () => {
   return (

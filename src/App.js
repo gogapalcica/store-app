@@ -1,12 +1,11 @@
-import { BrowserRouter, Route, Switch, Link } from "react-router-dom";
-
+import React from "react";
+import { BrowserRouter, Link, Switch, Route } from "react-router-dom";
 import { Customers } from "./pages/AppCustomers";
 import { Products } from "./pages/AppProducts";
 
-
 function App() {
   return (
-    <div>
+    <div className ="App">
       <BrowserRouter>
       <nav>
         <ul>
@@ -19,14 +18,14 @@ function App() {
         </ul>
       </nav>
       <Switch>
-        <Route path="/customers">
-            <Customers/>
-        </Route>
-        <Route path="/products">
-            <Products/>
-        </Route>
-      </Switch>
-      </BrowserRouter>
+      <Route path="/customers">
+        <Customers />
+      </Route>
+      <Route path="/products">
+        <Products />
+      </Route>
+    </Switch>
+    </BrowserRouter>
     </div>
   );
 }
