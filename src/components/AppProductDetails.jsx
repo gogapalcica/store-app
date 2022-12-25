@@ -1,1 +1,10 @@
-export const ProductHeading = () => <h1>Product</h1>;
+import React from "react";
+
+export const ProductDetails = ({name}) => {
+    
+    return(
+        <div>
+            <p>{name}</p>
+        </div>
+    )
+}

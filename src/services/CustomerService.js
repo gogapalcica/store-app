@@ -5,21 +5,41 @@ class CustomerService {
                 id: 1,
                 name: "Goga",
                 lastName: "Palackovic",
+                products:[{
+                    id:3,
+                    name:'ulje',
+                    count:0
+                }]
             },
             {
                 id: 2,
                 name: "Ljubisa",
                 lastName: "Radisic",
+                products:[{
+                    id:4,
+                    name:'hljeb',
+                    count:0
+                }]
             },
             {
                 id: 3,
                 name: "Dejana",
                 lastName: "Kovalj",
+                products:[{
+                        id:2,
+                        name:'jaja',
+                        count:0
+                    }]
             },
             {
                 id: 4,
                 name: "Ana",
                 lastName: "Kovalj",
+                products:[{
+                    id:2,
+                    name:'jaja',
+                    count:0
+                }]
             },
         ];
         this.nextId=this.customers.length +1;

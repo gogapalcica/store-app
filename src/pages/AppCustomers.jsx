@@ -45,10 +45,12 @@ export const Customers = () => {
       <ul>
         {customers.map((customer) => 
           (<li key={customer.id}><CustomersDetails
+            id = {customer.id}
             name={customer.name}
             lastName={customer.lastName}
             onDeleteSingleCustomer = {() => {handlerDeleteSingleCustomer(customer.id)}}
           /></li>
+          
 ))}
     </ul>
       </div>

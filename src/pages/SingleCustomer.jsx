@@ -1,19 +1,23 @@
 import React, { useState } from "react";
 import { useParams } from "react-router-dom";
-import CustomerService from "../services/CustomerService";
+import {customerService} from "../services/CustomerService";
+import { productService } from "../services/ProductService";
+import { SingleCustomerDetails } from "../components/SingleCustomerDetails";
 
-export default function SingleCustomer(){
-    
-    const {customerId} = useParams();
+export const SingleCustomer = () =>{
+
+    const {id} = useParams();
 
     const [customer, setSingleCustomer] = useState(
-        CustomerService.get(customerId)
+        customerService.get(id)
     );
     return(
         <div>
-            <h2>Single customer</h2>
-            Name: <p>{customer.name}</p>
-            Last Name: <p>{customer.lastName}</p>
+            <SingleCustomerDetails
+            id = {id}
+            name ={customer.name}
+            lastName = {customer.lastName}
+            products = {customer.products.map(el=>el.name)}/>
         </div>
     );
 }

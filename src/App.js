@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter, Link, Switch, Route } from "react-router-dom";
 import { Customers } from "./pages/AppCustomers";
 import { Products } from "./pages/AppProducts";
+import {SingleCustomer} from "./pages/SingleCustomer";
 
 function App() {
   return (
@@ -18,8 +19,11 @@ function App() {
         </ul>
       </nav>
       <Switch>
-      <Route path="/customers">
+      <Route exact path="/customers">
         <Customers />
+      </Route>
+      <Route path="/customers/:id">
+        <SingleCustomer/>
       </Route>
       <Route path="/products">
         <Products />
