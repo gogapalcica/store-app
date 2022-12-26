@@ -4,7 +4,7 @@ export const ProductDetails = ({name}) => {
     
     return(
         <div>
-            <p>{name}</p>
+            {name}
         </div>
     )
 }

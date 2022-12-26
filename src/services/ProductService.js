@@ -22,7 +22,7 @@ class ProductService {
                 count:0
             }
         ];
-        this.productId=this.products.length +1;
+        this.productId=this.products.length;
     }
     getAll(){
         return this.products;
@@ -30,6 +30,24 @@ class ProductService {
     get(id){
         return this.products.find((product)=> product.id === Number (id))
     }
-
+    increment(id) {
+        const product = this.products.find((product) => product.id === id);
+        product.count++;
+        return product;
+    }
+    decrement(id) {
+        const product = this.products.find((product) => product.id === id);
+        if (product.count <= 0) {
+          return false;
+        }
+        product.count--;
+    
+        return product;
+    }
+    search(term) {
+        return this.products.filter((product) =>
+          product.name.toLocaleLowerCase().includes(term.toLocaleLowerCase())
+        );
+    }
 }
 export const productService = new ProductService();
